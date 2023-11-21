@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/home/a4912520/Documents/sdp</OriginalElement>
+  <nodes>
+    <node x="556.0" y="513.0">MedicalServiceSelector</node>
+    <node x="838.0" y="910.0">Strategy.CardPaymentStrategy</node>
+    <node x="624.4706790123456" y="-30.5">Observer</node>
+    <node x="936.3333333333333" y="140.0">Clinic</node>
+    <node x="1133.0" y="910.0">Strategy.KaspiCardPaymentStrategy</node>
+    <node x="1792.0" y="910.0">Strategy.CashPaymentStrategy</node>
+    <node x="1056.1538461538462" y="794.0">Strategy.PaymentStrategy</node>
+    <node x="1483.0" y="910.0">Strategy.OnlinePaymentStrategy</node>
+    <node x="1368.3333333333333" y="569.5">ExtraSurgeryDecorator</node>
+    <node x="1682.360178970917" y="-44.5">Service</node>
+    <node x="556.0" y="910.0">Strategy.Patient</node>
+    <node x="1426.3333333333333" y="239.0">ServiceDecorator</node>
+    <node x="492.1454138702461" y="252.0">MedicalServiceSelector.PatientAuthentication</node>
+    <node x="978.8333333333333" y="-44.5">MedicalServicesFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="MedicalServiceSelector" target="Clinic" relationship="TO_ONE">
+      <point x="166.33333333333337" y="-118.0" />
+      <point x="971.8333333333334" y="492.0" />
+      <point x="938.0956790123456" y="492.0" />
+      <point x="938.0956790123456" y="482.0" />
+      <point x="1153.3333333333333" y="482.0" />
+      <point x="0.0" y="160.5" />
+    </edge>
+    <edge source="Clinic" target="MedicalServicesFactory" relationship="TO_ONE">
+      <point x="0.0" y="-160.5" />
+      <point x="0.0" y="47.0" />
+    </edge>
+    <edge source="MedicalServiceSelector.PatientAuthentication" target="MedicalServiceSelector" relationship="INNER_CLASS">
+      <point x="-73.5" y="104.5" />
+      <point x="565.6454138702461" y="492.0" />
+      <point x="805.5" y="492.0" />
+      <point x="0.0" y="-118.0" />
+    </edge>
+    <edge source="ServiceDecorator" target="Service" relationship="TO_ONE">
+      <point x="-15.0" y="-61.5" />
+      <point x="1542.8333333333333" y="158.5" />
+      <point x="1822.860178970917" y="158.5" />
+      <point x="21.0" y="75.5" />
+    </edge>
+    <edge source="Clinic" target="Service" relationship="TO_MANY">
+      <point x="0.0" y="-160.5" />
+      <point x="1153.3333333333333" y="109.0" />
+      <point x="1615.3087248322147" y="109.0" />
+      <point x="1615.3087248322147" y="106.5" />
+      <point x="-59.75" y="75.5" />
+    </edge>
+    <edge source="MedicalServiceSelector" target="MedicalServiceSelector.PatientAuthentication" relationship="TO_ONE">
+      <point x="166.33333333333337" y="-118.0" />
+      <point x="971.8333333333334" y="492.0" />
+      <point x="938.0956790123456" y="492.0" />
+      <point x="938.0956790123456" y="482.0" />
+      <point x="712.6454138702461" y="482.0" />
+      <point x="73.5" y="104.5" />
+    </edge>
+    <edge source="Strategy.CardPaymentStrategy" target="Strategy.PaymentStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-47.5" />
+      <point x="975.5" y="890.0" />
+      <point x="1462.75" y="890.0" />
+      <point x="1462.75" y="880.0" />
+      <point x="1226.4038461538462" y="880.0" />
+      <point x="56.75" y="33.0" />
+    </edge>
+    <edge source="MedicalServiceSelector" target="Observer" relationship="REALIZATION">
+      <point x="-166.33333333333337" y="-118.0" />
+      <point x="639.1666666666666" y="558.3221476510067" />
+      <point x="323.20917225950774" y="558.3221476510067" />
+      <point x="323.20917225950774" y="119.0" />
+      <point x="692.2206790123456" y="119.0" />
+      <point x="-67.75" y="33.0" />
+    </edge>
+    <edge source="Strategy.Patient" target="Strategy.PaymentStrategy" relationship="TO_ONE">
+      <point x="0.0" y="-47.5" />
+      <point x="687.0" y="880.0" />
+      <point x="1112.9038461538462" y="880.0" />
+      <point x="-56.75" y="33.0" />
+    </edge>
+    <edge source="Clinic" target="Observer" relationship="TO_MANY">
+      <point x="0.0" y="-160.5" />
+      <point x="1153.3333333333333" y="99.0" />
+      <point x="827.7206790123456" y="99.0" />
+      <point x="67.75" y="33.0" />
+    </edge>
+    <edge source="ServiceDecorator" target="Service" relationship="GENERALIZATION">
+      <point x="-0.0" y="-61.5" />
+      <point x="1557.8333333333333" y="158.5" />
+      <point x="1837.860178970917" y="158.5" />
+      <point x="36.0" y="75.5" />
+    </edge>
+    <edge source="Strategy.OnlinePaymentStrategy" target="Strategy.PaymentStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-47.5" />
+      <point x="1627.5" y="890.0" />
+      <point x="1462.75" y="890.0" />
+      <point x="1462.75" y="880.0" />
+      <point x="1226.4038461538462" y="880.0" />
+      <point x="56.75" y="33.0" />
+    </edge>
+    <edge source="ExtraSurgeryDecorator" target="ServiceDecorator" relationship="GENERALIZATION">
+      <point x="36.0" y="-61.5" />
+      <point x="-0.0" y="61.5" />
+    </edge>
+    <edge source="Strategy.CashPaymentStrategy" target="Strategy.PaymentStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-47.5" />
+      <point x="1931.0" y="890.0" />
+      <point x="1462.75" y="890.0" />
+      <point x="1462.75" y="880.0" />
+      <point x="1226.4038461538462" y="880.0" />
+      <point x="56.75" y="33.0" />
+    </edge>
+    <edge source="Strategy.KaspiCardPaymentStrategy" target="Strategy.PaymentStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-47.5" />
+      <point x="1298.0" y="890.0" />
+      <point x="1462.75" y="890.0" />
+      <point x="1462.75" y="880.0" />
+      <point x="1226.4038461538462" y="880.0" />
+      <point x="56.75" y="33.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8142076502732241" showDependencies="true" x="1323.0" y="462.1409395973154" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
