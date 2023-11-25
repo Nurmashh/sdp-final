@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/reservation.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b57446e670.js" crossorigin="anonymous"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script type="text/javascript">
+      var map;
+
+      DG.then(function () {
+        map = DG.map("map", {
+          center: [51.090679, 71.418435],
+          zoom: 13,
+        });
+
+        DG.marker([51.090679, 71.418435]).addTo(map);
+      });
+    </script>
+    <title>Clinic-Reservation</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">Clinic</label>
+      <ul class="info">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+        <li><a href="#Service">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+
+    
+   
+    <section class="section" id="reservation">
+
+
+      <div class="col-lg-6">
+        <div class="contact-form">
+            <form id="contact" action="" method="post">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Table Reservation</h4>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                <fieldset>
+                    <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                </fieldset>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                <fieldset>
+                <input name="email" type="text" id="email"  placeholder="Your Email Address" required="">
+                </fieldset>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                <fieldset>
+                    <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                </fieldset>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                <fieldset>
+                    <select value="nameOfService" name="nameOfService" id="nameOfService">
+                        <option value="nameOfService">Name of Service</option>
+                        <option name="1" id="1">Cardiology</option>
+                        <option name="2" id="2">Gastroenterology</option>
+                        <option name="3" id="3">Neuropathology</option>
+                        <option name="4" id="4">Otorhinolaryngology</option>
+                        <option name="5" id="5">Ophthalmology</option>
+                        <option name="6" id="6">Endocrinology</option>
+                        <option name="7" id="7">Allergology</option>
+                        <option name="8" id="8">Gynecology</option>
+                        <option name="9" id="9">Dermatology</option>
+                        <option name="10" id="10">Urology</option>
+                        <option name="11" id="11">Pulmonology</option>
+                        <option name="12" id="12">Pediatrics</option>
+                        <option name="13" id="13">Neonatology</option>
+                        <option name="14" id="14">Surgery</option>
+                        <option name="15" id="15">Traumatology-Orthopedics</option>
+                        <option name="16" id="16">Therapy</option>
+                        <option name="17" id="17">Dentistry</option>
+                        <option name="18" id="18">Infectiology</option>
+                    </select>
+                </fieldset>
+                </div>
+                <div class="col-lg-6">
+                    <div id="filterDate2">    
+                    <div class="input-group date" data-date-format="dd/mm/yyyy">
+                        <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
+                        <div class="input-group-addon" >
+                        <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    </div>   
+                </div>
+                <div class="col-md-6 col-sm-12">
+                <fieldset>
+                    <select value="time" name="time" id="time">
+                        <option value="time">Time</option>
+                        <option name="Morning" id="Morning">6:00-12:00</option>
+                        <option name="Afternoon" id="Afternoon">13:00-18:00</option>
+                        <option name="Evening" id="Evening">18:00-24:00</option>
+                    </select>
+                </fieldset>
+                </div>
+                <div class="col-lg-12">
+                <fieldset>
+                    <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                </fieldset>
+                </div>
+                <div class="col-lg-12">
+                <fieldset>
+                    <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
+                </fieldset>
+                </div>
+            </div>
+            </form>
+        </div>     
+    </div>
+  
+</div>
+
+
+      <div class="container">
+          <div class="row">
+              < class="col-lg-6 align-self-center">
+                  <div class="center-text-content">
+                      <div class="section-heading">
+                          <h2>Here You Can Make A Reservation Of Any kinds of Medical care</h2>
+                      </div>
+                      <p>We are happy to accommodate you whether you want to plan improve your health by contact us. We offer a quality of medicine to satisfy your cravings. Our friendly clinics atmosphere is always here to help you find the perfect thing to avoid your hurts</p>
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <div class="phone">
+                                  <i class="fa fa-phone"></i>
+                                  <h4>Phone Numbers</h4>
+                                  <span><a href="#">87055556455</a><br><a href="#">87055556455</a></span>
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="message">
+                                  <i class="fa fa-envelope"></i>
+                                  <h4>Emails</h4>
+                                  <span><a href="#">nb-clinics@gmail.com</a><br><a href="#">nb-clinics@gmail.com</a></span>
+                              </div>
+                          </div>
+                         
+                          <div class="map-container">
+                            <div id="map" style="width: 550px; height: 290px"></div>
+                </div>
+                    </div>
+              </div>
+              
+              
+       
+</section>
+
+
+
+
+    <section class="footer-section">
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li>
+            <a
+              href="https://www.facebook.com/nurmukhammed.darkhanbai"
+              target="_blank"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Nurmashh" target="_blank"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/nurmukhammed-darkhanbay-90ba45277/"
+              target="_blank"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nursw77/" target="_blank"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+        </ul>
+
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Registration</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p>@2023 Clinic N&B | Kazkhstan, Astana</p>
+      </footer>
+    </section>
+
+
+    <form id="contact" action="" method="post">
+      <!-- Your form fields go here -->
+      <div id="success-message">
+        <p>Thank you for your reservation! We'll get in touch with you shortly.</p>
+      </div>
+    </form>
+
+    
+    
+
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+    <script src="/src/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body{
+    font-family: 'CenturyGothic',Arial,Helvetica,sans-serif;
+    color: #5B6F73;
+    font-family: monospace;
+    
+}
+
+nav{
+    height: 80px;
+    background-color: #0082e6;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 7px 13px;
+}
+
+/* nav img{
+    align-items: center;
+    margin-top: 20px;
+    width: 50px;
+    height: auto;
+} */
+
+a.active,a.active:hover{
+
+    background: #1b9bff;
+ 
+    transition: .5s;
+}
+
+.activity_item:hover{
+    box-shadow: 0px 4px 8px rgba(32, 32, 35, 0.25);
+  }
+
+
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media screen and (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2c3e50;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+
+    }
+
+    #check:checked ~  ul{
+        left: 0;
+    }
+}
+
+/* section{
+    background: url() no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+} */
+
+.main-section{
+    background: url("/src/img/Nurse\ Injector\ Art\,Facial\ Veins\ and\ Arteries\ Art\,\ \ Botox\ Art\,\ Medical\ Spa\ Decor\,\ Cosmetic\ Clinic\ Decor\,\ Cosmetic\ Nurse\ Art\,\ Aesthetic\ Clinic.jpg") no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+.client-section {
+    margin-top: 20px;
+    padding: 80px 0;
+    background-color: #f4f4f4;
+}
+
+.gray_container {
+    position: relative;
+}
+
+.client-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.advan_list {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+    grid-gap: 10px;
+}
+
+.advan_list > li > p {
+    min-height: 60px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 5px 5px 5px 55px;
+    background: url(https://familyclinic.kz/themes/demo/assets/img/list_img.svg) left top 5px / 35px no-repeat;
+}

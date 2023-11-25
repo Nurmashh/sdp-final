@@ -1,0 +1,66 @@
+p{
+    font-size: 18px;
+    font-family: Segoe UI;
+    margin-bottom: 20px;
+  }
+  
+  h1{
+    font-size: 30px;
+    font-family: Perpetua;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  p1{
+    font-size: 25px;
+    font-family: Perpetua;
+    margin-bottom: 20px;
+  }
+  
+  h3{
+    font-size: 25px;
+    font-family: Perpetua;
+    margin-bottom: 20px;
+  }
+  
+  
+  main{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  
+  img{
+    width: 350px;
+    height: 300px;
+  }
+  
+  /* Общие стили для изображений */
+  main img {
+    max-width: 100%; /* Делаем изображения адаптивными */
+  }
+  
+  /* Стили для первой картинки и текста */
+  .Nurmukhammed {
+  
+    float: left;
+    text-align: right; /* Добавляем отступ снизу */
+   
+  }
+  
+  .Nurmukhammed img {
+    margin-right: 50px; /* Добавляем отступ справа от текста */
+  }
+  
+  /* Стили для второй картинки и текста */
+  .Batyrkhan {
+    float: right;
+    text-align: left;
+    margin-top: 80px; /* Добавляем отступ снизу */
+  }
+  
+  .Batyrkhan img {
+    margin-left: 50px; /* Добавляем отступ слева от текста */
+  }
+  

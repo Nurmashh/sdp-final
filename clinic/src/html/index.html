@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/footer.css" />
+    <link rel="stylesheet" href="/src/css/service.css" />
+    <link rel="stylesheet" href="/src/css/online_request.css" />
+    <link rel="stylesheet" href="/src/css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- bootstrap -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <style>
+      body .carousel {
+        font-family: Arial, sans-serif;
+        /* margin: 0;
+        padding: 0; */
+        background-color: #f4f4f4;
+      }
+
+      .carousel {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .carousel-img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5%;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        outline: none;
+        text-align: center;
+        user-select: none;
+      }
+
+      .carousel-btn-prev {
+        left: 0;
+      }
+
+      .carousel-btn-next {
+        right: 0;
+      }
+    </style>
+    <title>N&B</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">N&B</label>
+      <ul class="info">
+        <li><a class="Home drum" href="#">Home</a></li>
+        <li><a class="About drum" href="#About">About</a></li>
+        <li><a class="Services drum" href="#Service">Services</a></li>
+        <li><a class="Contact drum" href="#contact">Contact</a></li>
+        <li>
+          <a class="active Register drum" href="/src/html/registration.html"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="carousel">
+      <div class="carousel-container">
+        <div class="carousel-item">
+          <img class="carousel-img" src="/src/img/1.jpg" alt="Slide 1" />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-img"
+            src="/src/img/Dr-Bayer-NEW-WEBSITE-PART_6.jpg"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-img"
+            src="/src/img/Dr-Bayer-NEW-WEBSITE-PART_8.jpg"
+            alt="Slide 3"
+          />
+        </div>
+        <!-- Добавьте дополнительные слайды, при необходимости -->
+      </div>
+
+      <button class="carousel-btn carousel-btn-prev" onclick="prevSlide()">
+        ❮
+      </button>
+      <button class="carousel-btn carousel-btn-next" onclick="nextSlide()">
+        ❯
+      </button>
+    </div>
+
+    <!-- bootstrap carousel -->
+
+    <!-- <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <div class="carousel-inner" style="height: 650px">
+        <div class="carousel-item active c-item">
+          <img
+            src="/src/img/1.jpg"
+            class="d-block w-100 c-img img-fluid"
+            alt="Slide 1"
+          />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase">The lovely Place</p>
+            <h1 class="display-1 fw-bolder text-capitalize">Beautiful vibe</h1>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="/src/img/Dr-Bayer-NEW-WEBSITE-PART_6.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 2"
+          />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase">
+              The most delicious Asian dishes
+            </p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              Peaceful ambiance
+            </h1>
+          </div>
+        </div>
+
+        <div class="carousel-item c-item">
+          <img
+            src="/src/img/Dr-Bayer-NEW-WEBSITE-PART_8.jpg"
+            class="d-block w-100 c-img"
+            alt="Slide 3"
+          />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase">Welcoming staff</p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              Have a meal with us
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+
+    <main id="About">
+      <br />
+      <h3>
+        Welcome to the clinic "N&B" – your reliable partner in health care. Our
+        team of experts guarantees high-quality service, bringing to life many
+        years of experience and professional integrity.
+      </h3>
+      <br />
+      <h1>Our Experts</h1>
+      <br />
+      <div class="Nurmukhammed">
+        <img
+          src="/src/img/b1259284e51650f2fe7c79705a22dbf4.jpg"
+          align="left"
+          float="left"
+          margin
+        />
+        <h2>Dr. Nurmukhammed Darkhanbai:</h2>
+        <br />
+        <p>
+          With more than 20 years of experience in the field of psychology, Dr.
+          Darkhanbai is a recognized expert in his field. His attention to
+          detail and professional determination made him one of the leading
+          doctors in the field of psychology. Active participation in scientific
+          research, combined with practical experience, emphasizes his
+          progressive approach. Regular participation in international
+          conferences complements his view on innovations in the field of
+          psychology.
+        </p>
+        <br />
+      </div>
+      <div class="Batyrkhan">
+        <img
+          src="/src/img/image-result-for-doctor-office-advertising.jpg"
+          align="right"
+        />
+        <h2>Dr. Batyrkhan Adilbekov:</h2>
+        <br />
+        <p>
+          Dr. Adilbekov is an outstanding specialist in neurosurgery. His unique
+          approach to each patient and rich experience attract the respect of
+          colleagues and patients. His professionalism is confirmed by numerous
+          certificates and awards. You can be sure that your health is in safe
+          hands.
+        </p>
+        <br />
+      </div>
+      <h1>About us</h1>
+      <p1
+        >"N&B" is not just a clinic, it is a place where experience meets care,
+        where the quality of medical services is combined with an individual
+        approach. We strive not only to treat, but also to create trusting
+        relationships with our patients. Choosing "N&B", you choose to take care
+        of your health at the highest level. We are proud that our doctors are
+        not just professionals, but also doctors who find joy in restoring your
+        health. We invite you to join our family and entrust us with taking care
+        of your most valuable – your health.</p1
+      >
+    </main>
+
+    <section class="section" id="Service">
+      <div class="container">
+        <p class="title">Services</p>
+        <div class="service-block">
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/cardio.svg');
+            "
+          >
+            <span class="activity_name">Cardiology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/gastro.svg');
+            "
+          >
+            <span class="activity_name">Gastroenterology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/nevro.svg');
+            "
+          >
+            <span class="activity_name">Neuropathology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/oto.svg');
+            "
+          >
+            <span class="activity_name">Otorhinolaryngology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/eye.svg');
+            "
+          >
+            <span class="activity_name">Ophthalmology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/endokrin.svg');
+            "
+          >
+            <span class="activity_name">Endocrinology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/alergo.svg');
+            "
+          >
+            <span class="activity_name">Allergology-immunology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/gine.svg');
+            "
+          >
+            <span class="activity_name">Gynecology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/derma.svg');
+            "
+          >
+            <span class="activity_name">Dermatology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/uro.svg');
+            "
+          >
+            <span class="activity_name">Urology</span>
+          </a>
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/pulma.svg');
+            "
+          >
+            <span class="activity_name">Pulmonology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/pediatry.svg');
+            "
+          >
+            <span class="activity_name">Pediatrics</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/neon.svg');
+            "
+          >
+            <span class="activity_name">Neonatology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/hirurg.svg');
+            "
+          >
+            <span class="activity_name">Surgery</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/ortoped.svg');
+            "
+          >
+            <span class="activity_name">Traumatology-Orthopedics</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/terapy.svg');
+            "
+          >
+            <span class="activity_name">Therapy</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/teeth.svg');
+            "
+          >
+            <span class="activity_name">Dentistry</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/infekcy.svg');
+            "
+          >
+            <span class="activity_name">Infectiology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/genetic.svg');
+            "
+          >
+            <span class="activity_name">Genetics</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/logoped.svg');
+            "
+          >
+            <span class="activity_name">Logopedics</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/profpod.svg');
+            "
+          >
+            <span class="activity_name">Profpathology</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/fizio.svg');
+            "
+          >
+            <span class="activity_name">Physiotherapy</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/massage.svg');
+            "
+          >
+            <span class="activity_name">Massage</span>
+          </a>
+
+          <a
+            href="service_page.html"
+            class="activity_item"
+            style="
+              background-image: url('https://familyclinic.kz/storage/app/media/medicine/gidrocolon.svg');
+            "
+          >
+            <span class="activity_name">Hydrocolonotherapy</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="fixed-cont">
+      <a
+        href="https://wa.me/77074123541"
+        target="_blank"
+        class="z-whatsapp"
+        onclick="gtag('event', 'whatsapp', { 'event_category': 'whatsapp', 'event_action': 'click', }); ym(49441876, 'reachGoal', 'whatsapp'); return true;"
+      ></a>
+      <a
+        href="tel:+77074123541"
+        class="dozvon"
+        onclick="gtag('event', 'phone', { 'event_category': 'phone', 'event_action': 'click', }); ym(49441876, 'reachGoal', 'phone'); return true;"
+      ></a>
+      <a href="reservation.html" class="online_request drum" target="_blank"
+        ><span>online request</span></a
+      >
+    </div>
+
+    <section class="client-section">
+      <div class="container gray_container">
+        <p class="title">Why do clients choose us?</p>
+        <ul class="advan_list">
+          <li>
+            <p>
+              We are a private medical center where the center of attention is
+              the Client and his/her family!
+            </p>
+          </li>
+          <li>
+            <p>We only employ professionals, the best of the best!</p>
+          </li>
+          <li>
+            <p>
+              We do not provide one-time medical services, but a range of
+              services!
+            </p>
+          </li>
+          <li>
+            <p>We have a unique atmosphere, high service and premium status!</p>
+          </li>
+          <li>
+            <p>
+              We can serve the whole family, with pediatric and adult
+              specialists! adult specialists!
+            </p>
+          </li>
+          <li>
+            <p>We have all employees strive for excellence in what they do!</p>
+          </li>
+          <li>
+            <p>
+              We have accurate and timely diagnosis and effective treatment with
+              the use of state-of-the-art medical equipment! using modern
+              medical equipment!
+            </p>
+          </li>
+          <li>
+            <p>
+              We treat our Clients with hospitality and special respect.
+              respect!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-section" id="contact">
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li>
+            <a
+              href="https://www.facebook.com/nurmukhammed.darkhanbai"
+              target="_blank"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/Nurmashh" target="_blank"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/nurmukhammed-darkhanbay-90ba45277/"
+              target="_blank"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/nursw77/" target="_blank"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+        </ul>
+
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#Service">Service</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p>@2023 Clinic N&B | Kazkhstan, Astana</p>
+      </footer>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/src/js/script.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
